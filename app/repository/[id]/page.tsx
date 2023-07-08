@@ -12,7 +12,6 @@ const page = async ({params: {id}} : props) => {
     const data = await githubService.getOneRepository(id)
     const base64Content = data.content;
     const decodedContent = atob(base64Content);
-    console.log('decodedContent',decodedContent)
     return (
         <div>
             <p>{decodedContent}</p>
